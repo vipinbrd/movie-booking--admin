@@ -12,7 +12,7 @@ export function ManageMovie() {
     releaseDate: "",
     language: "",
     imdbRating: "",
- 
+    trailerLink: "",
     categoryId: "",
   });
   const [poster, setPoster] = useState(null);
@@ -61,7 +61,7 @@ export function ManageMovie() {
           releaseDate: "",
           language: "",
           imdbRating: "",
-        
+          trailerLink: "",
           categoryId: "",
         });
         setPoster(null);
@@ -117,7 +117,11 @@ export function ManageMovie() {
           <input type="number" name="imdbRating" value={movie.imdbRating} onChange={handleChange} required className="w-full p-2 border rounded" />
         </div>
 
-   
+        <div>
+          <label className="block mb-1">Trailer Link</label>
+          <input name="trailerLink" value={movie.trailerLink} onChange={handleChange} className="w-full p-2 border rounded" />
+        </div>
+
         <div>
           <label className="block mb-1">Category</label>
           <select name="categoryId" value={movie.categoryId} onChange={handleChange} required className="w-full p-2 border rounded">
